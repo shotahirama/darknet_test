@@ -1,4 +1,6 @@
+#include <fstream>
 #include <iostream>
+#include <string>
 
 extern "C" {
 #ifdef __cplusplus
@@ -21,5 +23,17 @@ int main(int argc, char *argv[]) {
   set_batch_network(&net, 1);
   layer l = net.layers[net.n - 1];
   printf("size : %d, %d, %d\n", l.w, l.h, l.n);
+
+  std::string filename = "data/coco.names";
+  std::ifstream reading_file(filename.c_str());
+
+  std::string reading_line_buffer;
+
+  std::cout << "-----" << std::endl;
+
+  while (std::getline(reading_file, reading_line_buffer)) {
+    std::cout << reading_line_buffer << std::endl;
+  }
+
   return 0;
 }
