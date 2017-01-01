@@ -3,7 +3,7 @@
 #include <string>
 
 extern "C" {
-#ifdef __cplusplus
+#undef __cplusplus
 #include "box.h"
 #include "cost_layer.h"
 #include "detection_layer.h"
@@ -12,7 +12,7 @@ extern "C" {
 #include "parser.h"
 #include "region_layer.h"
 #include "utils.h"
-#endif
+#define __cplusplus
 }
 
 int main(int argc, char *argv[]) {

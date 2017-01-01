@@ -2,7 +2,7 @@
 #include <vector>
 
 extern "C" {
-#ifdef __cplusplus
+#undef __cplusplus
 #include "box.h"
 #include "cost_layer.h"
 #include "demo.h"
@@ -11,7 +11,7 @@ extern "C" {
 #include "parser.h"
 #include "region_layer.h"
 #include "utils.h"
-#endif
+#define __cplusplus
 }
 
 image mat_to_image(cv::Mat src) {
