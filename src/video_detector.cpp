@@ -111,7 +111,7 @@ class Darknet {
 
 int main(int argc, char *argv[]) {
   Darknet darknet;
-  darknet.load("/home/shotahirama/Documents/git/darknet_test/darknet/cfg/yolo.cfg", "/home/shotahirama/Documents/git/darknet_test/darknet/yolo.weights");
+  darknet.load(arg[1], argv[2]);
   cv::VideoCapture cap(0);
   while (true) {
     cv::Mat img;
