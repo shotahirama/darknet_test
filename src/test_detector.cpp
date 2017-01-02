@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
   std::vector<box> boxes(l.w * l.h * l.n);
   std::vector<float *> probs(l.w * l.h * l.n);
   //    float *probs_in = static_cast<float *>(calloc(probs.size() * l.classes, sizeof(float)));
-  for (int i = 0; i < netsize; i++) {
+  for (int i = 0; i < l.w * l.h * l.n; i++) {
     probs[i] = static_cast<float *>(calloc(l.classes, sizeof(float)));
   }
   float *X = sized.data;
