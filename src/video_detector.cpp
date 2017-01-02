@@ -111,7 +111,7 @@ class Darknet {
 
 int main(int argc, char *argv[]) {
   Darknet darknet;
-  darknet.load(arg[1], argv[2]);
+  darknet.load(argv[1], argv[2]);
   cv::VideoCapture cap(0);
   while (true) {
     cv::Mat img;
