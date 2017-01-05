@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
   }
   float *X = sized.data;
   network_predict(net, X);
-  get_region_boxes(l, 1, 1, 0.24, probs.data(), boxes.data(), 0, 0);
+  get_region_boxes(l, 1, 1, 0.24, probs.data(), boxes.data(), 0, 0,0.5);
   if (nms) {
     do_nms_sort(boxes.data(), probs.data(), l.w * l.h * l.n, l.classes, nms);
   }
